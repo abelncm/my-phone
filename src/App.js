@@ -7,6 +7,7 @@ import Paper from '@mui/material/Paper';
 import { useState } from 'react';
 import Contact from './screens/Contact';
 import Dial from './screens/Dial';
+import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
@@ -20,7 +21,7 @@ export default function App() {
         background: 'white'
     }}>
 
-      <Box sx={{p:2}}>
+      <Box sx={{overflow:'auto', height: 320}}>
         {activeTab==0 && <Dial />}
         {activeTab==1 && <Contact />}
       </Box>
@@ -34,7 +35,7 @@ export default function App() {
           }}
         >
           <BottomNavigationAction label="Dial" icon={<LocalPhoneIcon />} />
-          <BottomNavigationAction label="Contact" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Contact" icon={<PermContactCalendarIcon />} />
         </BottomNavigation>
       </Paper>
 

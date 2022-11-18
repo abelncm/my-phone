@@ -1,0 +1,63 @@
+{
+    "contacts": [
+        {
+            "name": "Abel",
+            "phone": 5802943
+        },
+        {
+            "name": "Carol",
+            "phone": 5802943
+        },
+        {
+            "name": "Claudia",
+            "phone": 5802943
+        },
+        {
+            "name": "Suzete",
+            "phone": 5802943
+        },
+        {
+            "name": "Juliana",
+            "phone": 5802943
+        }
+    ],
+    "messages": [
+      {
+        "user": "abelncm",
+        "message": "hello"
+      },
+      {
+        "user": "joaomario",
+        "message": "hi Abel how are you"
+      },
+      {
+        "user": "joaomario",
+        "message": "i though you weren't here"
+      },
+      {
+        "user": "abelncm",
+        "message": "I am fine thank you! So what are you up to theses days?"
+      },
+      {
+        "user": "joaomario",
+        "message": "Nothing much, just enjoying my hollidays. So how is your family?"
+      }
+    ],
+    "users": [
+      {
+        "pic": "https://www.clipartmax.com/png/middle/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.png",
+        "user": "abelncm"
+      },
+      {
+        "pic": "https://www.clipartmax.com/png/middle/162-1623921_stewardess-510x510-user-profile-icon-png.png",
+        "user": "joaomario"
+      }
+    ],
+    "profile": {
+      "name": "Abel Coelho",
+      "age": 33,
+      "bio": "I like going to the movies, and code at the weekend.",
+      "pic": "https://www.clipartmax.com/png/middle/171-1717870_stockvader-predicted-cron-for-may-user-profile-icon-png.png"
+    }
+  }
+  

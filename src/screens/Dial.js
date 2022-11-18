@@ -22,7 +22,7 @@ export default function Dial() {
         setDisplay('');
     }
 
-    return <>
+    return <Box sx={{p:2}}>
 
         <Box sx={{
             p: 2,
@@ -79,5 +79,5 @@ export default function Dial() {
             </Paper>
         </Modal>
 
-    </>
+    </Box>
 }
