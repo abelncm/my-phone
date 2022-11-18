@@ -14,8 +14,8 @@ export default function App() {
   return (
     <Box sx={{ pb: 7 }}>
 
-      {activeTab==1 && <Contact />}
       {activeTab==0 && <Dial />}
+      {activeTab==1 && <Contact />}
 
       <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
         <BottomNavigation
