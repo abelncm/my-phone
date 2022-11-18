@@ -17,11 +17,13 @@ export default function App() {
         width: 300, 
         height: 300,
         margin: 'auto', 
-        background: 'white' 
+        background: 'white'
     }}>
 
-      {activeTab==0 && <Dial />}
-      {activeTab==1 && <Contact />}
+      <Box sx={{p:2}}>
+        {activeTab==0 && <Dial />}
+        {activeTab==1 && <Contact />}
+      </Box>
 
       <Paper sx={{  }} elevation={3}>
         <BottomNavigation
