@@ -12,12 +12,18 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <Box sx={{ pb: 7 }}>
+    <Paper sx={{ 
+        pb: 7, 
+        width: 300, 
+        height: 300,
+        margin: 'auto', 
+        background: 'white' 
+    }}>
 
       {activeTab==0 && <Dial />}
       {activeTab==1 && <Contact />}
 
-      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+      <Paper sx={{  }} elevation={3}>
         <BottomNavigation
           showLabels
           value={activeTab}
@@ -30,7 +36,7 @@ export default function App() {
         </BottomNavigation>
       </Paper>
 
-    </Box>
+    </Paper>
   );
 }
 
