@@ -12,7 +12,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <Paper sx={{ 
+    <Paper sx={{
         pb: 7, 
         width: 300, 
         height: 300,
