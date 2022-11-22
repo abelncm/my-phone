@@ -1,30 +1,35 @@
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material"
 import ImageIcon from '@mui/icons-material/Image';
-import axios from "axios";
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 import { Box } from "@mui/system";
+import axios from "axios";
 import { useEffect, useState } from "react";
-
+import AddContact from './AddContact';
 
 export default function Contact() {
 
     const [contacts, setContacts] = useState([]);
-    const dataUrl = 'https://my-json-server.typicode.com/abelncm/my-phone/contacts';
+    const pathUrl = '/persons';
 
-    useEffect(()=>{
-        getData();
+    useEffect(() => {
+        getPersons();
     }, []);
 
-    function getData() {
-        axios.get(dataUrl)
-            .then(function (response) {
+    function getPersons() {
+        axios.get(pathUrl)
+            .then(response => {
                 // handle success
                 console.log(response);
                 setContacts(response.data);
             })
-            .catch(function (error) {
+            .catch(error => {
                 // handle error
                 console.log(error);
             });
+    }
+
+    function onCreate(newPerson) {
+        contacts.push(newPerson);
+        setContacts([...contacts]);
     }
 
     return <>
@@ -37,7 +42,7 @@ export default function Contact() {
         >
             {contacts.map((contact, i) =>
                 <Box key={i}>
-                    <ListItem>
+                    <ListItem button>
                         <ListItemAvatar>
                             <Avatar>
                                 <ImageIcon />
@@ -52,5 +57,8 @@ export default function Contact() {
             )}
 
         </List>
+        <AddContact
+            contactsState={[contacts, setContacts]}
+            onCreation={onCreate}/>
     </>
 }

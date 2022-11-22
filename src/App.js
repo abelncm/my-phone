@@ -5,9 +5,12 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { useState } from 'react';
-import Contact from './screens/Contact';
+import Contact from './screens/contact/Contact';
 import Dial from './screens/Dial';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+import axios from "axios";
+
+axios.defaults.baseURL = 'http://127.0.0.1:3000';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
