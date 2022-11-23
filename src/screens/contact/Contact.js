@@ -58,7 +58,8 @@ export default function Contact() {
 
         </List>
         <AddContact
-            contactsState={[contacts, setContacts]}
-            onCreation={onCreate}/>
+            contactsState={[contacts, setContacts]} // option 1
+            onCreation={onCreate} // option 2
+        />
     </>
 }
