@@ -17,19 +17,21 @@ export default function App() {
 
   return (
     <Paper sx={{
-        pb: 7, 
         width: 300, 
-        height: 300,
+        // height: 300,
         margin: 'auto', 
-        background: 'white'
+        background: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden'
     }}>
 
-      <Box sx={{overflow:'auto', height: 320}}>
+      <Box sx={{height: 320, position: 'relative'}}>
         {activeTab==0 && <Dial />}
         {activeTab==1 && <Contact />}
       </Box>
 
-      <Paper sx={{  }} elevation={3}>
+      <Paper sx={{ zIndex:1 }} elevation={3}>
         <BottomNavigation
           showLabels
           value={activeTab}

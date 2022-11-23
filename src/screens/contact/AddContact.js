@@ -9,7 +9,7 @@ import axios from 'axios';
 import * as React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 
-export default function AddContact({onCreation, contactsState}) {
+export default function AddContact({ onCreation, contactsState }) {
 
     const [contacts, setContacts] = contactsState;
 
@@ -43,7 +43,7 @@ export default function AddContact({onCreation, contactsState}) {
                 // option 1
                 contacts.push(resp.data);
                 setContacts([...contacts]);
-                
+
                 // option 2
                 // onCreation(resp.data);
             })
@@ -54,8 +54,11 @@ export default function AddContact({onCreation, contactsState}) {
 
     return (
         <div>
-            <Fab size="medium" color="primary" onClick={handleClickOpen}>
-                <AddIcon />
+            <Fab sx={styles.addBtn}
+                size="medium"
+                color="primary"
+                onClick={handleClickOpen}>
+                    <AddIcon />
             </Fab>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Add a new contact</DialogTitle>
@@ -86,4 +89,12 @@ export default function AddContact({onCreation, contactsState}) {
             </Dialog>
         </div>
     );
+}
+
+const styles = {
+    addBtn: {
+        position: 'absolute',
+        bottom: 10,
+        right: 20,
+    }
 }
