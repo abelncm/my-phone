@@ -1,9 +1,7 @@
-import ImageIcon from '@mui/icons-material/Image';
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
-import { Box } from "@mui/system";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AddContact from './AddContact';
+import ContactList from './ContactList';
 
 export default function Contact() {
 
@@ -33,30 +31,7 @@ export default function Contact() {
     }
 
     return <>
-        <List
-            sx={{
-                width: '100%',
-                maxWidth: 360,
-                bgcolor: 'background.paper',
-            }}
-        >
-            {contacts.map((contact, i) =>
-                <Box key={i}>
-                    <ListItem button>
-                        <ListItemAvatar>
-                            <Avatar>
-                                <ImageIcon />
-                            </Avatar>
-                        </ListItemAvatar>
-                        <ListItemText
-                            primary={contact.name}
-                            secondary={contact.phone} />
-                    </ListItem>
-                    <Divider variant="inset" component="li" />
-                </Box>
-            )}
-
-        </List>
+        <ContactList contacts={contacts}/>
         <AddContact
             contactsState={[contacts, setContacts]} // option 1
             onCreation={onCreate} // option 2
